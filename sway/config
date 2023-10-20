@@ -9,7 +9,7 @@ exec bash ~/.config/sway/sound.bash
 exec mako
 exec sleep 0.5 && waybar
 exec swaykbdd
-exec swaybg -i $bg
+exec swaybg -i $bg -m fill
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
@@ -49,9 +49,9 @@ output LVDS-1 disable
 # Example configuration:
 # #
 exec swayidle -w \
-         timeout 300 $lock \
+         timeout 300 '$lock' \
          timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-         before-sleep $lock
+         before-sleep '$lock'
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
